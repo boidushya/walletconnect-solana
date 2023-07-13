@@ -76,7 +76,7 @@ export class WalletConnectWallet {
                     }
                 });
                 if (uri) {
-                    this.modal?.openModal({ uri }).then(() => {
+                    this.modal?.openModal({ uri }).catch(() => {
                         reject(new QRCodeModalError());
                     });
                 }
